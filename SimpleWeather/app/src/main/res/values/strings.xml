@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SimpleWeather</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Simple Weather</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="appwidget_text">SimpleWeather</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

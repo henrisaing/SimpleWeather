@@ -113,12 +113,23 @@
 
     <TextView
         android:id="@+id/textview_condition_0"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:text="Condition"
+        android:textAlignment="viewEnd"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:scrollbars="horizontal"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/textview_bullet"
-        app:layout_constraintEnd_toStartOf="@+id/textview_bullet" />
+        app:layout_constraintEnd_toStartOf="@+id/textview_bullet"
+        app:layout_constraintStart_toEndOf="@+id/textview_sunrise_0"
+        android:gravity="end" />
 
     <TextView
         android:id="@+id/textview_bullet"
@@ -326,12 +337,23 @@
 
     <TextView
         android:id="@+id/textview_condition_1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="end"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollbars="horizontal"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
         android:text="Condition1"
+        android:textAlignment="viewEnd"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintEnd_toStartOf="@+id/textView26" />
+        app:layout_constraintEnd_toStartOf="@+id/textView26"
+        app:layout_constraintStart_toEndOf="@+id/textview_sunrise_1" />
 
     <TextView
         android:id="@+id/textview_precip_mm_1"
@@ -450,12 +472,23 @@
 
     <TextView
         android:id="@+id/textview_condition_2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="end"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollbars="horizontal"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
         android:text="Condition2"
+        android:textAlignment="viewEnd"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView35"
-        app:layout_constraintEnd_toStartOf="@+id/textView36" />
+        app:layout_constraintEnd_toStartOf="@+id/textView36"
+        app:layout_constraintStart_toEndOf="@+id/textview_sunrise_2" />
 
     <TextView
         android:id="@+id/textview_avg_2"
@@ -691,12 +724,14 @@
         android:id="@+id/button_day0"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="visible"
         android:background="@color/Transparent"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textview_region" />
+        app:layout_constraintTop_toTopOf="@+id/textview_region"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_day1"

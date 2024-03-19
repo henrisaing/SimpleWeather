@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity{
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+//        TextView textViewCondition0 = findViewById(R.id.textview_condition_0);
+//        textViewCondition0.setMovementMethod(new ScrollingMovementMethod());
+        findViewById(R.id.textview_condition_0).setSelected(true);
+        findViewById(R.id.textview_condition_1).setSelected(true);
+        findViewById(R.id.textview_condition_2).setSelected(true);
     }
 
     @Override

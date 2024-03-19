@@ -163,7 +163,7 @@ public class FirstFragment extends Fragment {
                             String day0High = day0.getJSONObject("day").get("maxtemp_c").toString().split("\\.")[0] + "c";
                             String day0Low = day0.getJSONObject("day").get("mintemp_c").toString().split("\\.")[0] + "c";
                             String day0Avg = day0.getJSONObject("day").get("avgtemp_c").toString().split("\\.")[0] + "c";
-                            String day0Condition = day0.getJSONObject("day").getJSONObject("condition").get("text").toString().replaceAll("possible", "");
+                            String day0Condition = day0.getJSONObject("day").getJSONObject("condition").get("text").toString();
                             String day0mm = day0.getJSONObject("day").get("totalprecip_mm") + "mm";
                             String day0Humidity = current.get("humidity") + "%";
                             String day0Pop;
@@ -181,7 +181,7 @@ public class FirstFragment extends Fragment {
                             String day1Avg = day1.getJSONObject("day").get("avgtemp_c").toString().split("\\.")[0] + "c";
                             String day1High = day1.getJSONObject("day").get("maxtemp_c").toString().split("\\.")[0] + "c";
                             String day1Low = day1.getJSONObject("day").get("mintemp_c").toString().split("\\.")[0] + "c";
-                            String day1Condition = day1.getJSONObject("day").getJSONObject("condition").get("text").toString().replaceAll("possible", "");
+                            String day1Condition = day1.getJSONObject("day").getJSONObject("condition").get("text").toString();
                             String day1mm = day1.getJSONObject("day").get("totalprecip_mm") + "mm";
                             String day1Humidity = day1.getJSONObject("day").get("avghumidity") + "%";
                             String day1Pop;
@@ -199,7 +199,7 @@ public class FirstFragment extends Fragment {
                             String day2Avg = day2.getJSONObject("day").get("avgtemp_c").toString().split("\\.")[0] + "c";
                             String day2High = day2.getJSONObject("day").get("maxtemp_c").toString().split("\\.")[0] + "c";
                             String day2Low = day2.getJSONObject("day").get("mintemp_c").toString().split("\\.")[0] + "c";
-                            String day2Condition = day2.getJSONObject("day").getJSONObject("condition").get("text").toString().replaceAll("possible", "");
+                            String day2Condition = day2.getJSONObject("day").getJSONObject("condition").get("text").toString();
                             String day2mm = day2.getJSONObject("day").get("totalprecip_mm") + "mm";
                             String day2Humidity = day2.getJSONObject("day").get("avghumidity") + "%";
                             String day2Pop;

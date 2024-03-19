@@ -366,6 +366,7 @@ public class FirstFragment extends Fragment {
         textViewAvg0.setText(settings.getString("day0Avg", ""));
         textViewPop0.setText(settings.getString("day0Pop", ""));
         textViewCondition0.setText(settings.getString("day0Condition", ""));
+        textViewCondition0.setSelected(true);
         textViewMm0.setText(settings.getString("day0mm", ""));
         textViewHumidity0.setText(settings.getString("day0Humidity", ""));
 
@@ -376,6 +377,7 @@ public class FirstFragment extends Fragment {
         textViewLow1.setText(settings.getString("day1Low", ""));
         textViewPop1.setText(settings.getString("day1Pop", ""));
         textViewCondition1.setText(settings.getString("day1Condition", ""));
+        textViewCondition1.setSelected(true);
         textViewMm1.setText(settings.getString("day1mm", ""));
         textViewHumidity1.setText(settings.getString("day1Humidity", ""));
 
@@ -386,6 +388,7 @@ public class FirstFragment extends Fragment {
         textViewLow2.setText(settings.getString("day2Low", ""));
         textViewPop2.setText(settings.getString("day2Pop", ""));
         textViewCondition2.setText(settings.getString("day2Condition", ""));
+        textViewCondition2.setSelected(true);
         textViewMm2.setText(settings.getString("day2mm", ""));
         textViewHumidity2.setText(settings.getString("day2Humidity", ""));
     }

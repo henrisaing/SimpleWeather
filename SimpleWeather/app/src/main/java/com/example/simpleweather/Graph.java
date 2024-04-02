@@ -101,8 +101,8 @@ public class Graph extends Fragment {
                     day = new JSONObject(settings.getString("day0", "error"));
             }
 //creates main lines for temp & pop
-            DataPoint[] tempPoints = new DataPoint[24];
-            DataPoint[] popPoints = new DataPoint[24];
+            DataPoint[] tempPoints = new DataPoint[25];
+            DataPoint[] popPoints = new DataPoint[25];
             double[] hours = new double[24];
             double[] temps = new double[24];
             double[] pops = new double[24];
@@ -122,6 +122,8 @@ public class Graph extends Fragment {
                 tempPoints[i] = new DataPoint(hours[i], temps[i]);
                 popPoints[i] = new DataPoint(hours[i], popAdjusted);
             }
+            tempPoints[24] = new DataPoint(24.0, temps[23]);
+            popPoints[24] = new DataPoint(24.0, popPoints[23].getY());
 
             graphView = requireView().findViewById(R.id.idGraphView);
             LineGraphSeries<DataPoint> seriesTemps = new LineGraphSeries<DataPoint>(tempPoints);
@@ -200,13 +202,26 @@ public class Graph extends Fragment {
             graphView.getGridLabelRenderer().reloadStyles();
 
             graphView.setTitle(day.get("date").toString());
+            try{
+                DateFormat formatter = new SimpleDateFormat("yyy-MM-DD");
+                Date dateTitle = (Date)formatter.parse(day.get("date").toString());
+                SimpleDateFormat newFormat = new SimpleDateFormat("EEE MMM d");
+                String title = newFormat.format(dateTitle);
+                graphView.setTitle(title);
+            }catch (Exception e){
+
+            }
+
+
+
+//            graphView.setTitle(day.get("date").toString());
             graphView.setTitleColor(Color.WHITE);
             graphView.setTitleTextSize(45);
 
             graphView.getViewport().setMinY(-50);
             graphView.getViewport().setMaxY(50);
             graphView.getViewport().setMinX(0);
-            graphView.getViewport().setMaxX(23);
+            graphView.getViewport().setMaxX(24);
             graphView.getViewport().setYAxisBoundsManual(true);
             graphView.getViewport().setXAxisBoundsManual(true);
 

@@ -203,9 +203,10 @@ public class Graph extends Fragment {
 
             graphView.setTitle(day.get("date").toString());
             try{
-                DateFormat formatter = new SimpleDateFormat("yyy-MM-DD");
-                Date dateTitle = (Date)formatter.parse(day.get("date").toString());
-                SimpleDateFormat newFormat = new SimpleDateFormat("EEE MMM d");
+                String dateString = day.get("date").toString();
+                DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                Date dateTitle = (Date)formatter.parse(dateString);
+                SimpleDateFormat newFormat = new SimpleDateFormat("EEE MMM dd");
                 String title = newFormat.format(dateTitle);
                 graphView.setTitle(title);
             }catch (Exception e){
